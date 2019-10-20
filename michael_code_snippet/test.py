@@ -26,4 +26,7 @@ def find_group_id(st = ""):
 
 result = keywords.name.apply(find_group_id)
 
+solution = pd.DataFrame(result).rename(columns={'name': 'groups_found'})
+solution.index.name = 'index'
 
+solution.to_csv('solution_round1.csv') 
