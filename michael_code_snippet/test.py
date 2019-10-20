@@ -1,11 +1,9 @@
 import numpy as np
 import pandas as pd 
 
-
-extra2 = pd.read_clipboard('Extra Material 2 - keyword list_with substring.csv') 
 extra2 = pd.read_csv('Extra Material 2 - keyword list_with substring.csv')
 extra3 = pd.read_csv('Extra Material 3 - mismatch list.csv') 
-
+keywords = pd.read_csv('Keyword_spam_question.csv') 
 
 extra2['aslist'] = extra2.Keywords.apply(lambda st : st.split(', ')) 
 
@@ -19,5 +17,5 @@ def find_group_id(st = ""):
     return result
 
 
-keywords_part.name.apply(find_group_id)
+keywords.name.apply(find_group_id)
 
